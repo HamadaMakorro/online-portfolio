@@ -1,0 +1,80 @@
+/* Hover CSS for the CSS effects: https://ianlunn.github.io/Hover */
+
+#app-routes {
+  position: fixed;
+  top: 10vh;
+  left: -1vh;
+  z-index: 1;
+  opacity: 0.7;
+}
+
+/* Skew Forward */
+.app-route.experimental-3d {
+  margin-top: 1em;
+  padding: 1em 2em;
+  background-color: pink;
+  display: block;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transform-origin: 0 100%;
+  transform-origin: 0 100%;
+  
+}
+.app-route.experimental-3d:hover, .app-route.experimental-3d:focus, .app-route.experimental-3d:active {
+  -webkit-transform: skew(-10deg);
+  transform: skew(-10deg);
+  opacity: 1;
+  cursor: pointer;
+}
+
+/* Skew Backward */
+.app-route.basic-page {
+  margin-top: 1em;
+  padding: 1em 2em;
+  background-color: pink;
+  display: block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transform-origin: 0 100%;
+  transform-origin: 0 100%;
+}
+.app-route.basic-page:hover, .app-route.basic-page:focus, .app-route.basic-page:active {
+  -webkit-transform: skew(10deg);
+  transform: skew(10deg);
+  cursor: pointer;
+}
+
+/* Skew Forward */
+.app-route.landing-page {
+  margin-top: 1em;
+  padding: 1em 2em;
+  background-color: pink;
+  display: block;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transform-origin: 0 100%;
+  transform-origin: 0 100%;
+  
+}
+.app-route.landing-page:hover, .app-route.landing-page:focus, .app-route.landing-page:active {
+  -webkit-transform: skew(-10deg);
+  transform: skew(-10deg);
+  opacity: 1;
+  cursor: pointer;
+}

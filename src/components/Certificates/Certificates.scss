@@ -1,0 +1,34 @@
+/* Hover CSS for the CSS effects: https://ianlunn.github.io/Hover */
+
+$duration: 0.45s;
+
+/* Underline From Left */
+.certificate {
+  display: block;
+  padding: 1.5em;
+  border-left: purple 3px solid;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  position: relative;
+  overflow: hidden;
+}
+.certificate:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: 0;
+  right: 100%;
+  bottom: 0;
+  background: #2098D1;
+  height: 4px;
+  -webkit-transition-property: right;
+  transition-property: right;
+  -webkit-transition-duration: $duration;
+  transition-duration: $duration;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+.certificate:hover:before, .certificate:focus:before, .certificate:active:before {
+  right: 0;
+}

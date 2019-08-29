@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css?family=Tenor+Sans&display=swap');
+
+#business-card {
+  width: 350px;
+  height: 200px;
+  text-align: center;
+  font-family: 'Tenor Sans';
+  color: rgb(114, 111, 138);
+  transition: color 1.2s;
+  margin: auto;
+}
+
+#business-card:hover {
+  color: rgb(31, 34, 73);
+}
