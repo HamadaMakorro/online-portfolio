@@ -1,6 +1,6 @@
 ### 'Make ~~America~~ The Internet ~~great~~ *fun* again!'
 
-Steadily working towards my a highly configurable suite of interactive experiences. 
+Steadily working towards a highly configurable suite of interactive experiences. 
 
 # this project
 
