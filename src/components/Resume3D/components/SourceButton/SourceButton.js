@@ -1,6 +1,6 @@
 import React from 'react'
-import './Sourcebutton.css'
+import './Sourcebutton.scss'
 
 export default function() {
-  return <div id="source-button">SOURCE</div>
+  return <a href="https://github.com/HamadaMakorro/online-portfolio"><div id="source-button">SOURCE</div></a>
 }
