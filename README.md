@@ -22,7 +22,7 @@ Here's a quick and dirty method for [provisioning your AWS resources](https://me
 
 ### I am a 
 
-New experimental resume which explores the capability of modern web technologies. Some of the effects may be a little heavy.
+new experimental resume which explores the capability of modern web technologies. Some of the effects may be a little heavy.
 
 This is by no means a finished result. You'll probably come across things that'll make you scratch your butt.
 
