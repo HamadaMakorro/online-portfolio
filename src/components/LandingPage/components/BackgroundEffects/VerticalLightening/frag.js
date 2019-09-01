@@ -12,8 +12,8 @@ uniform float u_time;
 uniform vec2 u_resolution;
 uniform float u_horizontalPos;
 
-const float count = 17.0;
-const float speed = 3.0;
+const float count = 10.0;
+const float speed = 2.0;
 
 float Hash( vec2 p, in float s) {
     vec3 p2 = vec3(p.xy,27.0 * abs(sin(s)));

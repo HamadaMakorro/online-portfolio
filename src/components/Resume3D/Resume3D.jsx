@@ -66,10 +66,11 @@ function Resume3D( { state } ) {
     child[0] && canvas.removeChild( child[0] )
   }
 
+  /*eslint-disable*/
   // on mount
   useEffect(() => {
     if( window.innerWidth <= 768 ) return
-    init( state.three ) 
+    init( state.three )
     return function cleanup() {
       window.removeEventListener( 'wheel', onWindowMouseWheel )
       window.removeEventListener( 'mousemove', onWindowMouseMove )
@@ -82,7 +83,7 @@ function Resume3D( { state } ) {
       scene.background = state.three.backgroundColor
       card.material.visible = state.three.showCard
       card.material.color = state.three.cardColor
-      card.material.opacity = state.three.cardOpacity
+      // card.material.opacity = state.three.cardOpacity
     }
     
     /** spotlight updates */
@@ -289,6 +290,7 @@ function Resume3D( { state } ) {
     function onWindowResize(){
       renderer.setSize( window.innerWidth, window.innerHeight )
       _renderer.setSize( window.innerWidth, window.innerHeight )
+      // window.location.reload()
     }
     window.addEventListener( 'wheel', onWindowMouseWheel )
     window.addEventListener( 'mousemove', onWindowMouseMove )

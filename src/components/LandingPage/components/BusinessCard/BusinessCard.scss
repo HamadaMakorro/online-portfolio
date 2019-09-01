@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Tenor+Sans&display=swap');
 
+
 #business-card {
   width: 350px;
   height: 200px;
@@ -12,4 +13,10 @@
 
 #business-card:hover {
   color: rgb(31, 34, 73);
+}
+
+@media only screen and (max-width: 768px) {
+  #business-card {
+    margin: 32vh auto;
+  }
 }

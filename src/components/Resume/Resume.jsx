@@ -14,6 +14,7 @@ import './Resume.scss'
 // import createDatabaseEntries from '../../graphql/createDatabaseEntries'
 
 export default function() {
+  
   let width,
   element,
   progressBars,
@@ -24,12 +25,12 @@ export default function() {
     left: 10
   }
 
+
   if ( window.innerWidth <= 768 ) {
-    console.log('window.innerWidth: ', window.innerWidth);
     resizeForMobileDevice()
   } 
 
-  function resizeForMobileDevice() {      
+  function resizeForMobileDevice( e ) {      
     column = 1
     width = {
       right: 16,
@@ -39,7 +40,7 @@ export default function() {
   }
   
   // window.addEventListener( 'loadstart', resizeForMobileDevice )
-  window.addEventListener( 'resize', resizeForMobileDevice )
+  // window.addEventListener( 'resize', resizeForMobileDevice )
   progressBars = document.getElementsByClassName('ui progress')
 
   function addOrRemove( action, e ){

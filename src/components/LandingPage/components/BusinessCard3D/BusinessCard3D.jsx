@@ -214,11 +214,12 @@ export default function() {
     animate()
    }
 
-  // on mount
+   /*eslint-disable*/
+   // on mount
   useEffect(() => {
     init()
     return function cleanup() {
-      window.removeEventListner( 'mousemove', onWindowMouseMove )
+      window.removeEventListener( 'mousemove', onWindowMouseMove )
     }
   }, []) 
 

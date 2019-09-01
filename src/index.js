@@ -2,7 +2,6 @@ import React from 'react'
 import { render } from 'react-dom'
 import 'semantic-ui-css/semantic.min.css'
 import './index.scss'
-import Resume from './components/Resume/Resume'
 import rootReducer from './reducers'
 import { createStore } from "redux";
 import { Provider } from 'react-redux'
@@ -11,7 +10,17 @@ import * as serviceWorker from './serviceWorker';
 
 const store = createStore( rootReducer )
 
-window.addEventListener( 'resize', () => window.location.reload() )
+// window.onresize = () => window.location.reload()
+
+// required 'resize' fix for mobile browsers
+// let resizeTimer
+
+// window.addEventListener( 'resize', function(e) {
+//   clearTimeout(resizeTimer)
+//   resizeTimer = setTimeout(function() {
+//     window.location.reload()
+//   }, 250)
+// })
 
 function DisplayLinks() {
   function redirect( page ){

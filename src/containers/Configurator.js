@@ -1,6 +1,8 @@
 // import dat from "dat.gui";
 import { connect } from "react-redux";
-import { changeCardOpacity, changeScreenEffect, changeBackgroundEffect, changeBackgroundColor, showCard, changeCardColor, changeParticleSize, changeParticleCount, toggleWalls, multiplyForce, changeTimescale, changeCursorSize } from '../actions'
+import { 
+  // changeCardOpacity, 
+  changeScreenEffect, changeBackgroundEffect, changeBackgroundColor, showCard, changeCardColor, changeParticleSize, changeParticleCount, toggleWalls, multiplyForce, changeTimescale, changeCursorSize } from '../actions'
 import dat from "dat.gui";
 
 function Configurator({ dispatch }) {
@@ -13,7 +15,7 @@ function Configurator({ dispatch }) {
       showCard: true,
       cardColor: '#ffffff',
       // cardEffects: 'none',
-      cardOpacity: 1,
+      // cardOpacity: 1,
     },
     lights:{
       spotlightColor: '#ffffff',
@@ -43,7 +45,7 @@ function Configurator({ dispatch }) {
         resume.addColor( params.resume, "backgroundColor").name("backgroundcolor").onChange( value => dispatch(changeBackgroundColor( value ) ) )
         resume.addColor(  params.resume, "cardColor").name( "cardColor" ).onChange( value => dispatch(changeCardColor(value) ) )
         resume.add(  params.resume, "showCard").name( "showCard" ).onChange( value => dispatch(showCard(value) ) )
-        resume.add(  params.resume, "cardOpacity", 0, 1).name( "cardOpacity" ).onChange( value => dispatch(changeCardOpacity(value) ) )
+        // resume.add(  params.resume, "cardOpacity", 0, 1).name( "cardOpacity" ).onChange( value => dispatch(changeCardOpacity(value) ) )
         // resume.add(  params.resume, "cardEffects", ['none', 'plasma1']).name( "cardEffects" )
         // .onChange( value => dispatch(changeCardEffect(value) ) )
   
