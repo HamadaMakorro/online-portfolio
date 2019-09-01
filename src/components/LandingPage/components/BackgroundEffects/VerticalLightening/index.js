@@ -34,7 +34,7 @@ export default function() {
     constant = new Vector2( 2.0, 3.0 )
 
     function calcLighteningHorizontalPos() {
-      let k = 0.40 // horizontal positioning factor
+      let k = 0.43 // horizontal positioning factor
       let c = window.innerWidth / ( window.outerWidth / 5 )
       let width = c * k
       lighteningHorizontalPos = width
