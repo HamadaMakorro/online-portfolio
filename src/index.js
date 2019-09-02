@@ -10,17 +10,10 @@ import * as serviceWorker from './serviceWorker';
 
 const store = createStore( rootReducer )
 
-// window.onresize = () => window.location.reload()
-
-// required 'resize' fix for mobile browsers
-// let resizeTimer
-
-// window.addEventListener( 'resize', function(e) {
-//   clearTimeout(resizeTimer)
-//   resizeTimer = setTimeout(function() {
-//     window.location.reload()
-//   }, 250)
-// })
+window.addEventListener('load', () => {
+  document.getElementById('loading').remove()
+  _render()
+})
 
 function DisplayLinks() {
   function redirect( page ){
@@ -52,12 +45,14 @@ function DisplayLinks() {
   return null
 }
 
-render(
-  <Provider store={store}>
-    <DisplayLinks />
-    <Router />
-  </Provider>,
-  document.getElementById('root')
-)
+function _render() {
+  render(
+    <Provider store={store}>
+      <DisplayLinks />
+      <Router />
+    </Provider>,
+    document.getElementById('root')
+  )
+}
 
 serviceWorker.unregister();

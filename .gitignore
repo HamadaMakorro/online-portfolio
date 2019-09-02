@@ -1,6 +1,5 @@
 node_modules
 build
 dist
-src/aws-exports.js
 amplify
 .trash

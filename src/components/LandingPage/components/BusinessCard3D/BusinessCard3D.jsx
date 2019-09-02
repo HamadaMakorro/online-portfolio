@@ -2,12 +2,30 @@ import React, { useEffect } from 'react'
 import { LineDashedMaterial, Line, Geometry, Vector3, PointLight, WebGLRenderer, CSS3DRenderer, AmbientLight, SphereBufferGeometry, MeshBasicMaterial, Mesh, PlaneGeometry, MeshStandardMaterial, CSS3DObject, Group, PerspectiveCamera, Scene, LinearFilter, PMREMCubeUVPacker, PMREMGenerator, UnsignedByteType, HDRCubeTextureLoader } from 'three-full'
 import BusinessCard from '../BusinessCard/BusinessCard'
 import VerticalLightening from '../BackgroundEffects/VerticalLightening'
+import { Message } from 'semantic-ui-react'
 
 /**
  * Author: Hamada (https://hamada.me)
  */
 
+function isWebGLAvailable() {
+  try {
+    var canvas = document.createElement( 'canvas' );
+    return !! ( window.WebGLRenderingContext && ( canvas.getContext( 'webgl' ) || canvas.getContext( 'experimental-webgl' ) ) );
+  } catch ( e ) {
+    return false;
+  }
+}
+
 export default function() {
+  if ( !isWebGLAvailable() ) {
+    return (
+      <Message warning>
+          <p>Seems your browser/device doesn't support WebGL, which these experimental features rely on.</p>
+      </Message>
+    )
+  }
+
   let mouseX,
   mouseY,
   windowHalfX,

@@ -232,7 +232,7 @@ function Resume3D( { state } ) {
       }
       // material = createCardShader()
       cardWidth = window.innerWidth * 1.2
-      cardHeight = window.innerHeight * 5.0
+      cardHeight = 4450
       geometry = new PlaneGeometry( cardWidth, cardHeight )
       card = new Mesh( geometry, material )
         card.castShadow = false
