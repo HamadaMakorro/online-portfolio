@@ -168,7 +168,7 @@ Resources:
             build:
               commands:
                 - echo Build started on `date`
-                - npm run build --max-old-space-size=4096
+                - npm --max-old-space-size=4096 run build 
             post_build:
               commands:
                 - aws s3 cp --recursive --acl public-read ./build s3://${DeployBucket}/ 
