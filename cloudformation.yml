@@ -168,7 +168,7 @@ Resources:
             build:
               commands:
                 - echo Build started on `date`
-                - npm run build
+                - npm run build --max-old-space-size=4096
             post_build:
               commands:
                 - aws s3 cp --recursive --acl public-read ./build s3://${DeployBucket}/ 
@@ -187,6 +187,8 @@ Resources:
     Properties:
       WebsiteConfiguration:
         IndexDocument: index.html
+      VersioningConfiguration:
+        Status: Enabled
   Distribution:
     Type: "AWS::CloudFront::Distribution"
     Properties:
