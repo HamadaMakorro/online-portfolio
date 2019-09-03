@@ -153,7 +153,7 @@ Resources:
       Source: 
         Type: CODEPIPELINE
       Environment:
-        ComputeType: BUILD_GENERAL1_SMALL
+        ComputeType: BUILD_GENERAL1_MEDIUM
         Type: LINUX_CONTAINER
         Image: "aws/codebuild/nodejs:8.11.0"
       Source:
@@ -168,7 +168,7 @@ Resources:
             build:
               commands:
                 - echo Build started on `date`
-                - npm --max-old-space-size=4096 run build 
+                - npm run build --max-old-space-size=4096
             post_build:
               commands:
                 - aws s3 cp --recursive --acl public-read ./build s3://${DeployBucket}/ 
