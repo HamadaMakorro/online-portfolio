@@ -189,10 +189,17 @@ Resources:
         IndexDocument: index.html
       VersioningConfiguration:
         Status: Enabled
+      AccessControl: PublicRead
   Distribution:
     Type: "AWS::CloudFront::Distribution"
     Properties:
       DistributionConfig:
+        CustomErrorResponses:
+          - 
+            ErrorCachingMinTTL: 300
+            ErrorCode: 404
+            ResponseCode: 404
+            ResponsePagePath: /index.html
         Origins:
           - 
             DomainName: !GetAtt DeployBucket.DomainName
