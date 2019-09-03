@@ -11,7 +11,7 @@ import * as serviceWorker from './serviceWorker';
 const store = createStore( rootReducer )
 
 window.addEventListener('load', () => {
-  document.getElementById('loading').remove()
+  document.getElementById('loader').remove()
   _render()
 })
 
