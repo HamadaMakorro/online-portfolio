@@ -22,33 +22,32 @@ import './Resume3D.scss'
 let scene,
 card,
 renderer,
-_renderer
+_renderer,
+camera,
+material,
+geometry,
+objects,
+lights,
+stats,
+pointLight,
+
+windowHalfX,
+windowHalfY,
+mouseX,
+mouseY,
+onWindowMouseWheel,
+onWindowMouseMove,
+id,
+
+cardWidth,
+cardHeight
+// uniforms,
+// cardFragShader,
+// constant,
+// resolution,
+// cardEffects
 
 function Resume3D( { state } ) {
-  let camera,
-  material,
-  geometry,
-  objects,
-  lights,
-  stats,
-  pointLight,
-  
-  windowHalfX,
-  windowHalfY,
-  mouseX,
-  mouseY,
-  onWindowMouseWheel,
-  onWindowMouseMove,
-  id,
-
-  cardWidth,
-  cardHeight
-  // uniforms,
-  // cardFragShader,
-  // constant,
-  // resolution,
-  // cardEffects
-
   // screen effects
   const [ particleAttraction, toggleParticleAttraction ] = useState(false)
   const [ frozenBrush, toggleFrozenBrush ] = useState(false)
@@ -252,9 +251,7 @@ function Resume3D( { state } ) {
   
     scene.add( lights )
   
-    let [_onWindowMouseWheel, _onWindowMouseMove] = attachEventListeners()
-    onWindowMouseMove = _onWindowMouseMove
-    onWindowMouseWheel = _onWindowMouseWheel
+    [onWindowMouseWheel, onWindowMouseMove] = attachEventListeners()
 
     objects.position.y = -1750
   

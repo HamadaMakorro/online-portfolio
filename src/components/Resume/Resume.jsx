@@ -13,24 +13,27 @@ import { Message } from 'semantic-ui-react'
 import './Resume.scss'
 // import createDatabaseEntries from '../../graphql/createDatabaseEntries'
 
+let element,
+progressBars,
+column,
+width,
+skills,
+mobileView
+
 export default function() {
-  
-  let width,
-  element,
-  progressBars,
-  mobileView,
+  mobileView = false
+
   column = 2
   width = {
     right: 3,
     left: 10
   }
 
-
-  if ( window.innerWidth <= 768 ) {
+  if( window.innerWidth <= 768 ) {
     resizeForMobileDevice()
-  } 
+  }
 
-  function resizeForMobileDevice( e ) {      
+  function resizeForMobileDevice( e ) {
     column = 1
     width = {
       right: 16,
@@ -38,13 +41,11 @@ export default function() {
     }
     mobileView = true
   }
-  
-  // window.addEventListener( 'loadstart', resizeForMobileDevice )
-  // window.addEventListener( 'resize', resizeForMobileDevice )
+
   progressBars = document.getElementsByClassName('ui progress')
 
   function addOrRemove( action, e ){
-    const skills = e.target.attributes['skills'].nodeValue.split(' ')
+    skills = e.target.attributes['skills'].nodeValue.split(' ')
     skills && skills.forEach( ( skill ) => { 
       element = document.getElementById( skill )
       element && element.classList[action]('focus') 
