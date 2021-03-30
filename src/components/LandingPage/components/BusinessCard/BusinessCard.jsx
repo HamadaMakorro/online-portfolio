@@ -13,9 +13,9 @@ export default function() {
       <Role/>
       <Tagline />
       <Skillset/>
-      <Contact />
+      {/* <Contact /> */}
       <Location />
-      <ResumeButton/>
+      {/* <ResumeButton/> */}
     </div>
   )
 }
