@@ -6,6 +6,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import { Typography } from '@material-ui/core';
 import IconButton from '@material-ui/core/IconButton';
 import Tooltip from '@material-ui/core/Tooltip';
+import "@fontsource/tenor-sans";
 
 const useStyles = makeStyles((theme) => ({
   info: {
@@ -15,25 +16,30 @@ const useStyles = makeStyles((theme) => ({
   },
   name: {
     fontSize: "1.5rem",
-    fontWeight: 400
+    fontWeight: 400,
+    fontFamily: "Tenor Sans",
+    color: "#8d8c92"
   },
   role: {
     fontSize: "1.2rem",
-    fontWeight: 300
+    fontWeight: 300,
+    fontFamily: "Tenor Sans"
   },
   location: {
     fontSize: "0.65rem",
     fontWeight: 300,
-    fontStyle: "italic"
+    fontStyle: "italic",
+    fontFamily: "Tenor Sans"
   },
   card: {
     padding: "30px"
   },
   description: {
-    marginBottom: theme.spacing(2)
+    marginBottom: theme.spacing(2),
+    fontFamily: "Tenor Sans"
   },
   icons: {
-    color: "rgb(167, 167, 174)"
+    color: "rgb(179, 179, 179)"
   }
 }));
 
@@ -62,9 +68,9 @@ export default function() {
   return(
     <div id="business-card" className={classes.card}>
       <div className={classes.description}>
-        <Typography className={classes.name}>Mohamed Yusuf Mohamed</Typography>
-        <Typography className={classes.role}>React Developer</Typography>
-        <Typography className={classes.location}>London, UK</Typography>
+          <Typography className={classes.name}>Mohamed Yusuf Mohamed</Typography>
+          <Typography className={classes.role}>React Developer</Typography>
+          <Typography className={classes.location}>London, UK</Typography>
       </div>
         <Info Icon={LinkedInIcon} onClick={openLinkedIn} toolTip="Open LinkedIn"/>
         <Info Icon={EventIcon} onClick={bookCall} toolTip="Book a call"/>

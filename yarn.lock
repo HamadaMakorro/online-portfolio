@@ -1185,6 +1185,11 @@
   resolved "https://registry.yarnpkg.com/@emotion/hash/-/hash-0.8.0.tgz#bbbff68978fefdbe68ccb533bc8cbe1d1afb5413"
   integrity sha512-kBJtf7PH6aWwZ6fka3zQ0p6SBYzx4fl1LoZXE2RrnYST9Xljm7WfKJrU4g/Xr3Beg72MLrp1AWNUmuYJTL7Cow==
 
+"@fontsource/tenor-sans@^4.2.2":
+  version "4.2.2"
+  resolved "https://registry.yarnpkg.com/@fontsource/tenor-sans/-/tenor-sans-4.2.2.tgz#9ac6065d21623252255e0785e803f669476729a4"
+  integrity sha512-eJhRcuBGf1cw7zkYlol8yckHgUqo2xZAQZAOD3bdmUki+vwbLSZkc+B8RYr0mwYhiBZ/x1thBXSRq1iJlHSpGQ==
+
 "@hapi/address@2.x.x":
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/@hapi/address/-/address-2.0.0.tgz#9f05469c88cb2fd3dcd624776b54ee95c312126a"
